@@ -1,0 +1,33 @@
+<div ng-controller="confirmController as vm">
+    <app-cart items="vm.stateService.cart.items"></app-cart>
+    <div class="list-group-item panel-overlap">
+        <div class="row">
+            <div class="col-xs-4">
+                <label>{{ vm.stateService.selectedDeliveryOption.name }}</label>
+            </div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+                <label class="pull-right">$ {{ vm.stateService.selectedDeliveryOption.price | number : 2 }}</label>
+            </div>
+        </div>
+    </div>
+    <div class="list-group-item panel-overlap">
+        <div class="row">
+            <div class="col-xs-4">
+                <label>Order total:</label>
+            </div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+                <label class="pull-right">$ {{ vm.stateService.orderTotal(vm.stateService.selectedDeliveryOption) | number : 2 }}</label>
+            </div>
+        </div>
+    </div>
+    <div class="row button-panel-margin">
+        <div class="col-xs-6">
+            <button class="btn btn-default" ng-click="vm.back()">Back</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-info pull-right" ng-click="vm.completePurchase()">Submit order</button>
+        </div>
+    </div>
+</div>

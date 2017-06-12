@@ -1,0 +1,10 @@
+<div ng-controller="productComponent as vm">
+    <div class="list-group-item">
+        <div class="product-line-item">
+            <button class="pull-right btn btn-default button-margin" ng-click="vm.addToCart()">Add to cart</button>
+            <img ng-src="{{ vm.scope.item.img }}" width="60" height="60" class="img-rounded pull-left product-img">
+            <label>{{ vm.scope.item.name }} </label>
+            <h4 class="list-group-item-heading">$ {{ vm.scope.item.price | number : 2 }}</h4>
+        </div>
+    </div>
+</div>

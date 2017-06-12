@@ -1,0 +1,21 @@
+<div ng-controller="homeController as vm">
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <div class="nav pull-right">
+                    <button class="btn btn-success" ng-click="vm.goToCart()">
+                        <span><i class="fa fa-shopping-cart"></i></span>
+                        <span>({{ vm.stateService.cartItemCounter() | number : 0 }})</span>
+                    </button>
+                    <button class="btn btn-info" ng-show="vm.stateService.showCheckout()" ng-click="vm.stateService.goToCheckout()">
+                        Checkout
+                    </button>
+                </div>
+            </nav>
+            <h3 class="text-muted store-name" ng-click="vm.stateService.goHome()">eComm Store</h3>
+        </div>
+        <div class="page-host">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>

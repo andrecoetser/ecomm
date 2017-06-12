@@ -1,0 +1,35 @@
+<div ng-controller="cartComponent as vm">
+    <div class="list-group-item">
+        <div ng-repeat="item in vm.stateService.cart.items">
+            <div class="cart-line-item row">
+                <div class="col-xs-4">
+                    <label>{{ item.name }}</label>
+                    <h4 class="list-group-item-heading">$ {{ item.unitPrice | number : 2 }}</h4>
+                </div>
+                <div class="col-xs-1">
+                    <label class="label-margin">{{ item.quantity }}</label>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default" ng-click="vm.addToCart(item)">+</button>
+                    <button class="btn btn-default" ng-click="vm.removeFromCart(item)">-</button>
+                </div>
+                <div class="col-xs-4">
+                    <label class="pull-right label-margin">$ {{ item.quantity * item.unitPrice | number : 2 }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-group-item">
+        <div class="row">
+
+            <div class="col-xs-4">
+                <label>Items total: </label>
+            </div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+                <label class="pull-right">$ {{ vm.stateService.cartItemTotal() | number : 2}}</label>
+            </div>
+
+        </div>
+    </div>
+</div>

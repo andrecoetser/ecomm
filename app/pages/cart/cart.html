@@ -1,0 +1,15 @@
+<div ng-controller="cartController as vm">
+    <div class="panel panel-default">
+        <div class="list-group">
+            <app-cart items="vm.stateService.cart.items"></app-cart>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <button class="btn btn-danger" ng-click="vm.clear()">Clear</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-default pull-right" ng-click="vm.stateService.goHome()">Back</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" class="no-js">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>eComm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="pages/home/home.css">
+    <link rel="stylesheet" href="pages/checkout/confirm/confirm.css">
+    <link rel="stylesheet" href="components/product/product.css">
+    <link rel="stylesheet" href="components/cart/cart.css">
+</head>
+
+<body>
+    <ui-view></ui-view>
+
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="app.js"></script>
+    <script src="pages/home/home.controller.js"></script>
+    <script src="pages/checkout/checkout.controller.js"></script>
+    <script src="pages/products/products.controller.js"></script>
+    <script src="pages/checkout/shipping/shipping.controller.js"></script>
+    <script src="pages/checkout/complete/complete.controller.js"></script>
+    <script src="pages/checkout/confirm/confirm.controller.js"></script>
+    <script src="pages/cart/cart.controller.js"></script>
+    <script src="components/cart/cart.component.js"></script>
+    <script src="components/product/product.component.js"></script>
+    <script src="services/state/state.service.js"></script>
+    <script src="services/http/products.service.js"></script>
+    <script src="services/http/order.service.js"></script>
+</body>
+
+</html>

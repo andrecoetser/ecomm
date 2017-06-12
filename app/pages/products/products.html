@@ -1,0 +1,9 @@
+<div ng-controller="productsController as vm">
+    <div class="panel panel-default">
+        <div class="list-group">
+            <div ng-repeat="item in vm.items">
+                <app-product item="item"></app-product>
+            </div>
+        </div>
+    </div>
+</div>

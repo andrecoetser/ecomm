@@ -1,0 +1,42 @@
+<div ng-controller="shippingController as vm">
+    <div class="panel panel-default">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>
+                            <input type="radio" ng-model="vm.stateService.selectedDeliveryOption" ng-value="vm.stateService.deliveryMethods.standard">
+                            {{ vm.stateService.deliveryMethods.standard.name }}
+                        </label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <label class="pull-right">$ {{ vm.stateService.deliveryMethods.standard.price | number : 2}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>
+                            <input type="radio" ng-model="vm.stateService.selectedDeliveryOption" ng-value="vm.stateService.deliveryMethods.overnight">
+                            {{ vm.stateService.deliveryMethods.overnight.name }}
+                        </label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <label class="pull-right">$ {{ vm.stateService.deliveryMethods.overnight.price | number : 2}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <button class="btn btn-default" ng-click="vm.stateService.goHome()">Back</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-info pull-right" ng-click="vm.confirmItems()">Next</button>
+        </div>
+    </div>
+</div>
