@@ -2,10 +2,9 @@
     <app-cart items="vm.stateService.cart.items"></app-cart>
     <div class="list-group-item panel-overlap">
         <div class="row">
-            <div class="col-xs-4">
-                <label>{{ vm.stateService.selectedDeliveryOption.name }}</label>
+            <div class="col-xs-8">
+                <label>{{ vm.stateService.selectedDeliveryOption.name }}:</label>
             </div>
-            <div class="col-xs-4"></div>
             <div class="col-xs-4">
                 <label class="pull-right">$ {{ vm.stateService.selectedDeliveryOption.price | number : 2 }}</label>
             </div>
@@ -13,10 +12,9 @@
     </div>
     <div class="list-group-item panel-overlap">
         <div class="row">
-            <div class="col-xs-4">
+            <div class="col-xs-8">
                 <label>Order total:</label>
             </div>
-            <div class="col-xs-4"></div>
             <div class="col-xs-4">
                 <label class="pull-right">$ {{ vm.stateService.orderTotal(vm.stateService.selectedDeliveryOption) | number : 2 }}</label>
             </div>
